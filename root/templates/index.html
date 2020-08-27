@@ -1,12 +1,10 @@
-<html>
-    <head>
-        <title>CloudPi</title>
-    </head>
-    <body>
-        <h1>¡Hola!</h1>
-        <form method="POST" enctype="multipart/form-data">
-            <input type = "file" name="selectedFile">
-            <input type="submit">
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <h1>¡Hola!</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type = "file" class="form-control-file" name="selectedFile">
+        <input type="submit" class="btn btn-primary">
+    </form>
+</body>
+{% endblock %}
