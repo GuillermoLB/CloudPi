@@ -8,6 +8,8 @@ def index():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    text = request.form['text']
-    processed_text = text.upper()
-    return processed_text
+    selectedFile = request.files['selectedFile'] #variable fileStorage
+    selectedFile_name = selectedFile.filename
+    selectedFile_route = 'root/static/uploads/{}'.format(selectedFile_name) #probar con ruta absoluta de modo
+    selectedFile.save(selectedFile_route)
+    return selectedFile.filename
