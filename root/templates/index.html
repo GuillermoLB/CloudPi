@@ -7,7 +7,7 @@
         <input type="submit" class="btn btn-primary btn-lg">
     </div>
 </form>
-{% for post in posts %}
-    {% include '$post.html' %}
+{% for file in files %}
+    {{ file.filename }}
 {% endfor %}
 {% endblock %}
