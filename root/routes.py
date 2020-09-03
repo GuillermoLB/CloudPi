@@ -1,6 +1,7 @@
 from root import app
+from root.forms import FormLogin
 import os #para ejecutar comanmdos linux
-from flask import render_template, request
+from flask import render_template, request, send_from_directory, send_file
 
 @app.route('/')
 def index():
@@ -16,3 +17,13 @@ def my_form_post():
     os.system('cd root/static/uploads && mkdir dir5')
     
     return selectedFile.filename
+
+@app.route('/return_file', methods=['GET','POST'])
+def return_file():
+    return send_file('routes.py')
+
+
+@app.route('/login', methods=['GET','POST'])
+def login():
+    form = FormLogin()
+    return render_template('login.html', form = form)

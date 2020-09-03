@@ -1,4 +1,35 @@
 body {
     background-color: rgb(54, 54, 54);
     color: white;
+    margin-top: 70px;
+    margin-left: 40px;
+    font-size: x-large;
 }
+
+.btn {
+
+    font-size: x-large;
+    padding: 10px;
+
+
+
+}
+
+
+
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+
+form {
+
+    font-size: xx-large;
+    color: white;
+
+
+}
+
